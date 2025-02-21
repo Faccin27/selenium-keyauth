@@ -21,6 +21,7 @@ login_button_xpath = "/html/body/section/div/div[2]/div/form/button"
 users_button_xpath = "/html/body/div[1]/aside/div/div/div/div[3]/div[1]/ul/li/a"
 search_input_xpath = "/html/body/div[1]/div[2]/main/div/div/div/div/div/div[12]/div/div[1]/div[2]/div/label/input"
 table_rows_xpath = "/html/body/div[1]/div[2]/main/div/div/div/div/div/div[12]/div/div[2]/table/tbody/tr"
+resethwid_button_xpath = "/html/body/div[1]/div[2]/main/div/div/div/div/div/div[12]/div/div[2]/table/tbody/tr[1]/td[8]/form/div/ul/li[2]/button"
 
 target_user = "Faccin"
 
@@ -55,4 +56,7 @@ for row in rows:
 
 time.sleep(2)
 
+driver.find_element("xpath", resethwid_button_xpath ).click()
+
+time.sleep(100)
 driver.quit()
